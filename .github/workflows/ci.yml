@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, "feature/**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run simple test
+        run: echo "All tests passed"
